@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Timeless</title>
+
+
+</head>
+
+<body>
+<h1>Enter your time</h1>
+{{#timesEntered}}
+<form method= "post" action = "/update">
+Week Of :<input autofocus required type="text" name="dateEntered">
+Monday : <input autofocus required type="number" name="monday">
+Tuesday : <input autofocus required type="number" name="tuesday">
+Wednesday : <input autofocus required type="number" name="wednesday">
+Thursday : <input autofocus required type="number" name="thursday">
+Friday : <input autofocus required type="number" name="friday">
+Total<input autofocus required type="number" name="totalHours">
+{{/timesEntered}}
+
+{{#timesPosted}}
+Week Of : {{ dateEntered }}
+Monday : {{ monday }}
+Tuesday : {{ tuesday }}
+Wednesday :  {{ wednesday }}
+Thursday : {{ thursday }}
+Friday : {{ friday }}
+Total : {{ totalHours }}
+{{/timesPosted}}
+
+<button class="submit-time">Submit</button>
+</form>
+
+
+</body>
+</html>
